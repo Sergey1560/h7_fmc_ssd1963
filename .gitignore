@@ -1,0 +1,5 @@
+/build/
+Src/version.c
+.vscode/.cortex-debug.*
+.vscode/ipch/
+ozone.jdebug.user

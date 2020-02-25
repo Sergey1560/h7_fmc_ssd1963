@@ -1,0 +1,10 @@
+void OnProjectLoad (void) {
+  Project.AddPathSubstitute ("./", "$(ProjectDir)");
+  Project.SetDevice ("STM32H743II");
+  Project.SetHostIF ("USB", "");
+  Project.SetTargetIF ("SWD");
+  Project.SetTIFSpeed ("4 MHz");
+  Project.AddSvdFile ("$(InstallDir)/Config/CPU/Cortex-M7F.svd");
+  Project.AddSvdFile ("$(ProjectDir)/STM32H7x3.svd");
+  File.Open ("$(ProjectDir)/build/firmware.elf");
+}
